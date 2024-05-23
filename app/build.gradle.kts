@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.firebase.crashlytics)
     id("com.google.gms.google-services")
     kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -51,6 +52,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.fragment.ktx)
 
     // Import the BoM for the Firebase platform
     implementation(platform(libs.firebase.bom))
@@ -93,4 +95,7 @@ dependencies {
     implementation(libs.retrofit2.kotlin.coroutines.adapter)
     implementation(libs.kotlinx.coroutines.android)
 
+    implementation(libs.kotlin.extensions)
+
+    implementation(libs.resultat)
 }

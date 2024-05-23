@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="error_generic">Error occurred. Please try again.</string>
 </resources>
