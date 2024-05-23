@@ -1,4 +1,4 @@
-package com.example.weatherapp
+package com.example.weatherapp.view.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
