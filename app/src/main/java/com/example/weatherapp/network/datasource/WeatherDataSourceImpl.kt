@@ -2,8 +2,10 @@ package com.example.weatherapp.network.datasource
 
 import com.example.weatherapp.data.datasource.network.WeatherDataSource
 import com.example.weatherapp.domain.exception.FlowGenericErrorMessageFactory
+import com.example.weatherapp.domain.model.astronomy.AstronomyVO
 import com.example.weatherapp.domain.model.city.CityVO
 import com.example.weatherapp.domain.model.weather.WeatherVO
+import com.example.weatherapp.network.mapper.astronomy.AstronomyMapper
 import com.example.weatherapp.network.mapper.city.CityListMapper
 import com.example.weatherapp.network.mapper.weather.WeatherMapper
 import com.example.weatherapp.network.service.TestService
@@ -19,6 +21,7 @@ class WeatherDataSourceImpl @Inject constructor(
     private val cityListMapper: CityListMapper,
     private val weatherMapper: WeatherMapper,
     private val dispatchers : DispatcherProvider,
+    private val astronomyMapper: AstronomyMapper,
     @Named("weather_key") private val weatherKey : String
 ) : WeatherDataSource {
 
@@ -37,6 +40,15 @@ class WeatherDataSourceImpl @Inject constructor(
                 weatherService.searchCities(weatherKey, query)
             }
             cityListMapper.map(liveData)
+        }
+    }
+
+    override suspend fun getAstronomy(query: String, dt: String): Result<AstronomyVO> {
+        return Result.runCatching {
+            val liveData = withContext(dispatchers.io){
+                weatherService.getAstronomy(weatherKey, query, dt)
+            }
+            astronomyMapper.map(liveData)
         }
     }
 }

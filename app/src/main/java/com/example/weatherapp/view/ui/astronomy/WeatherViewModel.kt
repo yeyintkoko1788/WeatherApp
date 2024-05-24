@@ -1,9 +1,11 @@
-package com.example.weatherapp.view.ui.home
+package com.example.weatherapp.view.ui.astronomy
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.weatherapp.domain.model.FlowReturnResult
+import com.example.weatherapp.domain.model.astronomy.AstronomyVO
 import com.example.weatherapp.domain.model.city.CityVO
+import com.example.weatherapp.domain.usecase.AstronomyUseCase
 import com.example.weatherapp.domain.usecase.SearchUseCase
 import com.example.weatherapp.view.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -18,11 +20,14 @@ import javax.inject.Inject
 
 @HiltViewModel
 class WeatherViewModel @Inject constructor(
-    private val searchUseCase: SearchUseCase
+    private val searchUseCase: SearchUseCase,
+    private val astronomyUseCase: AstronomyUseCase
 ): BaseViewModel() {
 
     val searchFlow : MutableLiveData<FlowReturnResult<List<CityVO>>> =
         MutableLiveData()
+
+    val astronomyFlow : MutableLiveData<FlowReturnResult<AstronomyVO>> = MutableLiveData()
 
     fun getSearchResult(query : String){
         searchUseCase(SearchUseCase.Params(query)).onEach {
@@ -43,4 +48,25 @@ class WeatherViewModel @Inject constructor(
                 searchFlow.postValue(FlowReturnResult.ErrorResult(flowGenericErrorMessageFactory.getErrorMessage(it)))
             }
     }
+
+    fun getAstronomy(query: String, dt : String){
+        astronomyUseCase(AstronomyUseCase.Params(query, dt)).onEach {
+            handleAstronomyData(it)
+        }.catch {
+            handleAstronomyData(Resultat.failure(it))
+        }.launchIn(viewModelScope)
+    }
+
+    private fun handleAstronomyData(resultat : Resultat<AstronomyVO>){
+        resultat.onLoading {
+            astronomyFlow.postValue(FlowReturnResult.LoadingRelsult())
+        }
+            .onSuccess {
+                astronomyFlow.postValue(FlowReturnResult.PositiveResult(it))
+            }
+            .onFailure {
+                astronomyFlow.postValue(FlowReturnResult.ErrorResult(flowGenericErrorMessageFactory.getErrorMessage(it)))
+            }
+    }
+
 }

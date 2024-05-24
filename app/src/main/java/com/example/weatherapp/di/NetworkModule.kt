@@ -2,6 +2,7 @@ package com.example.weatherapp.di
 
 import android.content.Context
 import com.chuckerteam.chucker.api.ChuckerInterceptor
+import com.example.weatherapp.network.component.MyPreference
 import com.google.firebase.BuildConfig
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
@@ -24,6 +25,11 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
+    @Provides
+    @Singleton
+    fun providesSharePrefUtils(context : Context) =
+        MyPreference(context)
 
     @Module
     @InstallIn(SingletonComponent::class)

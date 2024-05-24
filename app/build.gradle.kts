@@ -102,4 +102,10 @@ dependencies {
     implementation(libs.resultat)
 
     implementation(libs.lottie)
+
+    //for calculate difftime for api less than 26
+    implementation (libs.threetenabp)
+
+    implementation (libs.play.services.location)
+
 }

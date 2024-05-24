@@ -6,6 +6,7 @@ import com.example.weatherapp.domain.exception.FlowGenericErrorMessageFactory
 import com.example.weatherapp.domain.model.FlowReturnResult
 import com.example.weatherapp.network.showLogE
 import com.google.firebase.BuildConfig
+import com.google.gson.Gson
 import okhttp3.ResponseBody
 import org.json.JSONException
 import org.json.JSONObject
@@ -113,8 +114,13 @@ class FlowGenericErrorMessageFactoryImpl @Inject constructor(
 
                 if (responseBody != null) {
                     try {
-                        if (responseBody.isNull("message"))
-                            responseBody["error"].toString()
+                        if (responseBody.isNull("message")){
+                            val error = responseBody["error"]
+                            val gson = Gson()
+
+                            val response = gson.fromJson(error.toString(), ErrorResponse::class.java)
+                            response.message
+                        }
                         else
                             responseBody["message"].toString()
                     }catch (e : Exception){

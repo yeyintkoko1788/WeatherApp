@@ -15,7 +15,7 @@ import com.example.weatherapp.domain.model.FlowReturnResult
 import com.example.weatherapp.view.BaseFragment
 import com.example.weatherapp.view.adapter.CityAdapter
 import com.example.weatherapp.view.delegate.CityDelegate
-import com.example.weatherapp.view.ui.home.WeatherViewModel
+import com.example.weatherapp.view.ui.astronomy.WeatherViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

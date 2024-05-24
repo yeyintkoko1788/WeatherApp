@@ -2,11 +2,19 @@
     <string name="app_name">WeatherApp</string>
     <string name="error_generic">Error occurred. Please try again.</string>
     <string name="text_slogan">Bringing Sunshine to Your Screen</string>
-    <string name="text_home">Home</string>
+    <string name="text_home">Astronomy</string>
     <string name="text_search">Search</string>
     <string name="text_sport">Sport</string>
     <string name="text_search_cities">Search Cities</string>
     <string name="text_tips">Tips</string>
     <string name="text_country">Country :</string>
     <string name="text_region">Region :</string>
+    <string name="text_city_search">City search</string>
+    <string name="text_login">Login</string>
+    <string name="text_city_info">City Info</string>
+    <string name="text_distance">Distance :</string>
+    <string name="text_local_time">Local Time :</string>
+    <string name="text_more_info">More Info</string>
+    <string name="text_time_different_from_sunrise_to_moonrise">Time different from sunrise to moonrise</string>
+    <string name="text_time_different_from_sunset_to_moonset">Time different from sunset to moonset</string>
 </resources>
