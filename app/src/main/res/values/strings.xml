@@ -17,4 +17,8 @@
     <string name="text_more_info">More Info</string>
     <string name="text_time_different_from_sunrise_to_moonrise">Time different from sunrise to moonrise</string>
     <string name="text_time_different_from_sunset_to_moonset">Time different from sunset to moonset</string>
+    <string name="text_football">Football</string>
+    <string name="text_cricket">Cricket</string>
+    <string name="text_golf">Golf</string>
+    <string name="text_there_is_no_relevant_data">There is no relevant data</string>
 </resources>

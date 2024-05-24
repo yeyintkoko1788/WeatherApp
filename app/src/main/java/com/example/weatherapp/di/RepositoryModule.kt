@@ -1,7 +1,12 @@
 package com.example.weatherapp.di
 
+import com.example.weatherapp.data.datasource.network.SportDataSource
+import com.example.weatherapp.data.repository.SportRepositoryImpl
 import com.example.weatherapp.data.repository.WeatherRepositoryImpl
+import com.example.weatherapp.domain.repository.SportRepository
 import com.example.weatherapp.domain.repository.WeatherRepository
+import com.example.weatherapp.network.datasource.SportDataSourceImpl
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,10 +15,14 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RepositoryModule {
-    @Provides
+abstract class RepositoryModule {
     @Singleton
-    fun getWeatherRepository(
+    @Binds
+    abstract fun bindWeatherRepository(
         weatherRepositoryImpl : WeatherRepositoryImpl
-    ) : WeatherRepository = weatherRepositoryImpl
+    ) : WeatherRepository
+
+    @Singleton
+    @Binds
+    abstract fun bindSportRepository(sportRepositoryImpl: SportRepositoryImpl) : SportRepository
 }

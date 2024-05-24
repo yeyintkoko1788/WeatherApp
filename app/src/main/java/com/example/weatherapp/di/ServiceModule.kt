@@ -1,6 +1,7 @@
 package com.example.weatherapp.di
 
 import androidx.annotation.NonNull
+import com.example.weatherapp.network.service.SportService
 import com.example.weatherapp.network.service.TestService
 import com.example.weatherapp.network.service.WeatherService
 import com.example.weatherapp.network.showLogI
@@ -30,6 +31,13 @@ object ServiceModule {
     @Provides
     fun provideWeatherService(@Named("flowAuthenticatedBuilder") retrofitBuilder : Retrofit.Builder) : WeatherService {
         return retrofitBuilder.build().create(WeatherService::class.java)
+    }
+
+    @Singleton
+    @NonNull
+    @Provides
+    fun provideSportService(@Named("flowAuthenticatedBuilder") retrofitBuilder : Retrofit.Builder) : SportService {
+        return retrofitBuilder.build().create(SportService::class.java)
     }
 
     @Singleton

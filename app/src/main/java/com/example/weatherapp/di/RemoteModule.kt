@@ -1,6 +1,8 @@
 package com.example.weatherapp.di
 
+import com.example.weatherapp.data.datasource.network.SportDataSource
 import com.example.weatherapp.data.datasource.network.WeatherDataSource
+import com.example.weatherapp.network.datasource.SportDataSourceImpl
 import com.example.weatherapp.network.datasource.WeatherDataSourceImpl
 import dagger.Binds
 import dagger.Module
@@ -15,4 +17,8 @@ abstract class RemoteModule {
     @Singleton
     @Binds
     abstract fun bindWeatherNetworkDataSource(weatherDataSourceImpl: WeatherDataSourceImpl) : WeatherDataSource
+
+    @Singleton
+    @Binds
+    abstract fun bindSportNetworkDataSource(sportDataSourceImpl: SportDataSourceImpl) : SportDataSource
 }
