@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeMenu"
+        android:icon="@drawable/ic_home"
+        android:title="@string/text_home" />
+
+    <item
+        android:id="@+id/searchMenu"
+        android:icon="@drawable/ic_search"
+        android:title="@string/text_search" />
+    <item
+        android:id="@+id/sportMenu"
+        android:icon="@drawable/ic_sport"
+        android:title="@string/text_sport" />
+
+</menu>

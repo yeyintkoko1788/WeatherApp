@@ -2,6 +2,7 @@ package com.example.weatherapp.di
 
 import androidx.annotation.NonNull
 import com.example.weatherapp.network.service.TestService
+import com.example.weatherapp.network.service.WeatherService
 import com.example.weatherapp.network.showLogI
 import dagger.Module
 import dagger.Provides
@@ -22,6 +23,13 @@ object ServiceModule {
     @Provides
     fun provideShortsService(@Named("flowAuthenticatedBuilder") retrofitBuilder : Retrofit.Builder) : TestService {
         return retrofitBuilder.build().create(TestService::class.java)
+    }
+
+    @Singleton
+    @NonNull
+    @Provides
+    fun provideWeatherService(@Named("flowAuthenticatedBuilder") retrofitBuilder : Retrofit.Builder) : WeatherService {
+        return retrofitBuilder.build().create(WeatherService::class.java)
     }
 
     @Singleton

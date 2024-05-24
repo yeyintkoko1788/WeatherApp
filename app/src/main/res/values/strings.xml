@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">WeatherApp</string>
     <string name="error_generic">Error occurred. Please try again.</string>
+    <string name="text_slogan">Bringing Sunshine to Your Screen</string>
+    <string name="text_home">Home</string>
+    <string name="text_search">Search</string>
+    <string name="text_sport">Sport</string>
+    <string name="text_search_cities">Search Cities</string>
+    <string name="text_tips">Tips</string>
+    <string name="text_country">Country :</string>
+    <string name="text_region">Region :</string>
 </resources>

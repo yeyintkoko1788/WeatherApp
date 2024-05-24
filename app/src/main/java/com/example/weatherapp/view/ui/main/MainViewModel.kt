@@ -1,12 +1,15 @@
-package com.example.weatherapp.view.ui.login
+package com.example.weatherapp.view.ui.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.weatherapp.domain.exception.FlowGenericErrorMessageFactory
 import com.example.weatherapp.domain.model.FlowReturnResult
+import com.example.weatherapp.domain.model.city.CityVO
 import com.example.weatherapp.domain.model.weather.WeatherVO
+import com.example.weatherapp.domain.usecase.SearchUseCase
 import com.example.weatherapp.domain.usecase.WeatherUseCase
+import com.example.weatherapp.view.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import fr.haan.resultat.Resultat
 import fr.haan.resultat.onFailure
@@ -20,9 +23,8 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(
     private val weatherUseCase: WeatherUseCase
-) : ViewModel(){
-    @Inject
-    lateinit var flowGenericErrorMessageFactory : FlowGenericErrorMessageFactory
+) : BaseViewModel(){
+
 
     val liveEventFlow : MutableLiveData<FlowReturnResult<WeatherVO>> =
         MutableLiveData()

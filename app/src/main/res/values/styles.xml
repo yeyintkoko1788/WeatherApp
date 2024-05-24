@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BoldXS">
+        <item name="android:fontFamily">@font/gelion_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XS_size</item>
+    </style>
+
+    <style name="BoldS">
+        <item name="android:fontFamily">@font/gelion_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="BoldN">
+        <item name="android:fontFamily">@font/gelion_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="BoldL">
+        <item name="android:fontFamily">@font/gelion_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="BoldXL">
+        <item name="android:fontFamily">@font/gelion_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XL_size</item>
+    </style>
+
+    <style name="BoldXXL">
+        <item name="android:fontFamily">@font/gelion_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XXL_size</item>
+    </style>
+
+    <style name="BoldXXXL">
+        <item name="android:fontFamily">@font/gelion_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XXXL_size</item>
+    </style>
+
+    <style name="Bold5XL">
+        <item name="android:fontFamily">@font/gelion_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_5XL_size</item>
+    </style>
+
+    <style name="DemiBoldXS">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XS_size</item>
+    </style>
+
+    <style name="DemiBoldS">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="DemiBoldN">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="DemiBoldL">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="DemiBoldXL">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XL_size</item>
+    </style>
+
+    <style name="DemiBold1XL">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/textSize_large</item>
+    </style>
+
+    <style name="DemiBold2XL">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XXL_size</item>
+    </style>
+
+    <style name="DemiBold3XL">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_XXXL_size</item>
+    </style>
+
+    <style name="DemiBold4XL">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_4XL_size</item>
+    </style>
+
+    <style name="DemiBold5XL">
+        <item name="android:fontFamily">@font/gelion_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/SP_5XL_size</item>
+    </style>
+
+    <style name="RegularXL">
+        <item name="android:fontFamily">@font/gelion_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XL_size</item>
+    </style>
+
+
+    <style name="RegularL">
+        <item name="android:fontFamily">@font/gelion_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="RegularN">
+        <item name="android:fontFamily">@font/gelion_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="RegularS">
+        <item name="android:fontFamily">@font/gelion_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="RegularXS">
+        <item name="android:fontFamily">@font/gelion_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XS_size</item>
+    </style>
+
+    <style name="RegularXXS">
+        <item name="android:fontFamily">@font/gelion_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XXS_size</item>
+    </style>
+
+    <style name="Regular4XS">
+        <item name="android:fontFamily">@font/gelion_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_4XS_size</item>
+    </style>
+
+    <style name="MediumXS">
+        <item name="android:fontFamily">@font/gelion_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XS_size</item>
+    </style>
+
+    <style name="MediumS">
+        <item name="android:fontFamily">@font/gelion_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="MediumN">
+        <item name="android:fontFamily">@font/gelion_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="MediumL">
+        <item name="android:fontFamily">@font/gelion_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="MediumXL">
+        <item name="android:fontFamily">@font/gelion_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XL_size</item>
+    </style>
+
+    <style name="Medium2xL">
+        <item name="android:fontFamily">@font/gelion_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/textSize_large</item>
+    </style>
+
+    <style name="MediumXXL">
+        <item name="android:fontFamily">@font/gelion_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XXL_size</item>
+    </style>
+
+    <style name="MediumXXXL">
+        <item name="android:fontFamily">@font/gelion_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_XXXL_size</item>
+    </style>
+
+    <style name="LightS">
+        <item name="android:fontFamily">@font/gelion_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_S_size</item>
+    </style>
+
+    <style name="LightN">
+        <item name="android:fontFamily">@font/gelion_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_N_size</item>
+    </style>
+
+    <style name="LightL">
+        <item name="android:fontFamily">@font/gelion_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/SP_L_size</item>
+    </style>
+
+    <style name="PrimaryButtonStyle" parent="MediumN">
+        <item name="android:background">@drawable/bg_primary_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/standard_button_size</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingStart">@dimen/button_start_end_padding</item>
+        <item name="android:paddingEnd">@dimen/button_start_end_padding</item>
+        <item name="android:paddingTop">@dimen/button_top_bottom_padding</item>
+        <item name="android:paddingBottom">@dimen/button_top_bottom_padding</item>
+    </style>
+
+    <style name="SecondaryButtonStyle" parent="MediumN">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/bg_secondary_button</item>
+        <item name="android:clickable">true</item>
+        <item name="android:minHeight">@dimen/standard_button_size</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingStart">@dimen/button_start_end_padding</item>
+        <item name="android:paddingEnd">@dimen/button_start_end_padding</item>
+        <item name="android:paddingTop">@dimen/button_top_bottom_padding</item>
+        <item name="android:paddingBottom">@dimen/button_top_bottom_padding</item>
+    </style>
+
+    <style name="LoginTextInputEditTextStyle">
+        <item name="android:textAppearance">@style/LightN</item>
+        <item name="android:textColor">@color/neutral700</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:background">@drawable/input_text_field_selector</item>
+        <item name="android:paddingStart">@dimen/margin_xlarge</item>
+        <item name="android:paddingEnd">@dimen/margin_xlarge</item>
+        <item name="android:paddingTop">@dimen/margin_3xSmall</item>
+        <item name="android:paddingBottom">@dimen/margin_3xSmall</item>
+    </style>
+
+    <style name="LoginTextFieldStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/color_login_input_border</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="boxBackgroundColor">@color/colorSupportLight</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:textAppearance">@style/BoldN</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/blue</item>
+    </style>
+
+    <dimen name="standard_button_size">48dp</dimen>
+</resources>
