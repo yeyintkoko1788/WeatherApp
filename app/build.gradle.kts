@@ -58,12 +58,11 @@ dependencies {
 
     // Import the BoM for the Firebase platform
     implementation(platform(libs.firebase.bom))
-
-    // Add the dependencies for the Crashlytics and Analytics libraries
-    // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.crashlytics.ktx)
+    implementation(libs.firebase.auth)
+    implementation(libs.play.services.auth)
 
     //lifecycle
     implementation(libs.androidx.lifecycle.runtime.ktx)
