@@ -72,6 +72,8 @@ dependencies {
     //glide
     implementation(libs.glide)
     implementation(libs.glide.transformations)
+    // If you want to use the GPU Filters
+    implementation (libs.gpuimage)
     kapt(libs.compiler)
 
     //hilt

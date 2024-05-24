@@ -68,7 +68,7 @@
     <dimen name="margin_12xlarge">108dp</dimen>
     <dimen name="margin_200">150dp</dimen>
 
-    <dimen name="cardview_default_corner_radius">4dp</dimen>
+    <dimen name="cardview_default_corner_radius">16dp</dimen>
     <dimen name="button_start_end_padding">32dp</dimen>
     <dimen name="button_top_bottom_padding">12dp</dimen>
 

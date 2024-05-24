@@ -7,7 +7,8 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/white">
+        app:liftOnScroll="false"
+        android:background="@color/colorPrimary">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_sport"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -82,6 +83,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/neutral700"
                 android:id="@+id/tv_football"
+                android:visibility="gone"
                 android:text="@string/text_football"
                 style="@style/DemiBold2XL"
                 android:layout_marginHorizontal="@dimen/margin_2xlarge"
@@ -169,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/neutral700"
                 android:id="@+id/tv_cricket"
+                android:visibility="gone"
                 android:text="@string/text_cricket"
                 style="@style/DemiBold2XL"
                 android:layout_marginHorizontal="@dimen/margin_2xlarge"
@@ -255,6 +258,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tbl_cricket"
                 android:textColor="@color/neutral700"
                 android:id="@+id/tv_golf"
+                android:visibility="gone"
                 android:text="@string/text_golf"
                 style="@style/DemiBold2XL"
                 android:layout_marginHorizontal="@dimen/margin_2xlarge"

@@ -23,6 +23,7 @@ class AstronomyMapper @Inject constructor(
     var df: DecimalFormat = DecimalFormat("#.###")
     override fun map(data: AstronomyResponse): AstronomyVO {
         return AstronomyVO(
+            name = data.location.name,
             region = data.location.region,
             country = data.location.country,
             localTime = getDate(data.location.localtime),

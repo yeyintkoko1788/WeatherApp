@@ -75,6 +75,9 @@ class SportFragment : BaseFragment<SportViewModel>() {
     }
 
     private fun bindData(data: SportVO){
+        binding.tvFootball.visibility = View.VISIBLE
+        binding.tvCricket.visibility = View.VISIBLE
+        binding.tvGolf.visibility = View.VISIBLE
         if (data.footBall.isEmpty()){
             binding.rlFootballEmpty.visibility = View.VISIBLE
             binding.tblFootball.visibility = View.GONE

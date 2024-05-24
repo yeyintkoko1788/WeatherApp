@@ -76,7 +76,7 @@
     <color name="primaryP1p500">#FB1A26</color>
     <color name="primaryP1P50">#FFE9ED</color>
     <color name="primaryP2P50">#E4F3FF</color>
-    <color name="primaryP2400">#4DA8FF</color>
+    <color name="primaryP2400">#7EBCF8</color>
     <color name="primaryP2P500">#3A98FF</color>
     <color name="primaryP2P600">#3D89FF</color>
 
@@ -93,5 +93,5 @@
 
     <color name="progress_bar_bg">#57ECECEC</color>
 
-    <color name="window_background">#FFFFF0</color>
+    <color name="window_background">#F4F4F4</color>
 </resources>

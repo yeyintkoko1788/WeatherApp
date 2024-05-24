@@ -69,9 +69,10 @@ class AstronomyFragment : BaseFragment<WeatherViewModel>() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun bindData(data: AstronomyVO){
-        binding.tvRegion.text = data.region
-        binding.tvCountry.text = data.country
+        binding.tvCityInfo.text = data.name
+        binding.tvLocation.text = data.region+", "+data.country
         binding.tvDistance.text = data.distance
         binding.tvLocalTime.text = data.localTime
         binding.tvSunRise.text = data.sunrise

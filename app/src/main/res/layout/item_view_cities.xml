@@ -5,87 +5,57 @@
     android:layout_marginHorizontal="@dimen/margin_2xlarge"
     android:layout_marginTop="@dimen/margin_2xSmall"
     android:layout_marginBottom="@dimen/margin_2xSmall"
+    android:foreground="@drawable/ripple_bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="@dimen/cardview_default_corner_radius">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small">
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_2xlarge"
-            android:layout_marginTop="@dimen/margin_2xlarge"
             android:id="@+id/tvName"
-            style="@style/DemiBoldL"
+            style="@style/MediumXXL"
             android:textColor="@color/neutral700"
             tools:text="Yangon"
+            app:layout_constraintEnd_toStartOf="@id/iv_right"
+            android:layout_marginEnd="@dimen/margin_2xSmall"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:id="@+id/iv_map"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/margin_small"
-            app:srcCompat="@drawable/ic_map"
+            android:id="@+id/iv_location"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvLocation"
+            app:layout_constraintBottom_toBottomOf="@id/tvLocation"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLocation"
+            android:layout_marginTop="@dimen/margin_4xSmall"
+            android:layout_marginStart="@dimen/margin_4xSmall"
+            app:layout_constraintStart_toEndOf="@id/iv_location"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            app:layout_constraintEnd_toStartOf="@id/iv_right"
+            android:layout_marginEnd="@dimen/margin_2xSmall"
+            tools:text="Yangon"
+            style="@style/LightN"
+            android:textColor="@color/neutral500"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_right"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            app:tint="@color/neutral700"
+            app:srcCompat="@drawable/ic_right_arrow"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:padding="@dimen/margin_4xSmall"
-            android:foreground="?attr/actionBarItemBackground"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/ll_region"
-            android:layout_marginEnd="@dimen/margin_2xlarge"
-            android:layout_marginStart="@dimen/margin_2xlarge"
-            android:layout_marginTop="@dimen/margin_small"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvName">
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/text_region"
-                style="@style/MediumL"
-                android:textColor="@color/neutral500"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvRegion"
-                android:layout_marginStart="@dimen/margin_4xSmall"
-                tools:text="Yangon"
-                style="@style/MediumL"
-                android:textColor="@color/neutral700"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginStart="@dimen/margin_2xlarge"
-            android:layout_marginBottom="@dimen/margin_2xlarge"
-            android:id="@+id/ll_country"
-            android:layout_marginEnd="@dimen/margin_2xlarge"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ll_region">
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/text_country"
-                style="@style/MediumL"
-                android:textColor="@color/neutral500"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvCountry"
-                tools:text="Myanmar"
-                android:layout_marginStart="@dimen/margin_4xSmall"
-                style="@style/MediumL"
-                android:textColor="@color/neutral700"/>
-        </LinearLayout>
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

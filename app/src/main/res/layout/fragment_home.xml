@@ -7,7 +7,8 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/white">
+        app:liftOnScroll="false"
+        android:background="@color/colorPrimary">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_home"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +129,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/data_root"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +147,8 @@
                     app:layout_constraintTop_toTopOf="parent">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_small">
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -154,115 +156,73 @@
                             android:id="@+id/tv_city_info"
                             style="@style/DemiBold2XL"
                             android:text="@string/text_city_info"
-                            android:layout_marginHorizontal="@dimen/margin_2xlarge"
-                            android:layout_marginTop="@dimen/margin_2xlarge"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:id="@+id/ll_region"
-                            android:layout_marginEnd="@dimen/margin_2xlarge"
-                            android:layout_marginStart="@dimen/margin_2xlarge"
-                            android:layout_marginTop="@dimen/margin_small"
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_location"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            app:srcCompat="@drawable/ic_location"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_city_info">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/text_region"
-                                style="@style/MediumL"
-                                android:textColor="@color/neutral500"/>
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tvRegion"
-                                android:layout_marginStart="@dimen/margin_4xSmall"
-                                tools:text="Yangon"
-                                style="@style/MediumL"
-                                android:textColor="@color/neutral700"/>
-                        </LinearLayout>
+                            app:layout_constraintTop_toTopOf="@id/tvLocation"
+                            app:layout_constraintBottom_toBottomOf="@id/tvLocation"/>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvLocation"
+                            android:layout_marginTop="@dimen/margin_4xSmall"
+                            android:layout_marginStart="@dimen/margin_2xSmall"
+                            app:layout_constraintStart_toEndOf="@+id/iv_location"
+                            app:layout_constraintTop_toBottomOf="@id/tv_city_info"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:text="Yangon"
+                            style="@style/MediumN"
+                            android:textColor="@color/neutral500"/>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/margin_small"
-                            android:layout_marginStart="@dimen/margin_2xlarge"
-                            android:layout_marginBottom="@dimen/margin_2xlarge"
-                            android:id="@+id/ll_country"
-                            android:layout_marginEnd="@dimen/margin_2xlarge"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/ll_region">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/text_country"
-                                style="@style/MediumL"
-                                android:textColor="@color/neutral500"/>
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tvCountry"
-                                tools:text="Myanmar"
-                                android:layout_marginStart="@dimen/margin_4xSmall"
-                                style="@style/MediumL"
-                                android:textColor="@color/neutral700"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/margin_small"
-                            android:layout_marginStart="@dimen/margin_2xlarge"
-                            android:layout_marginBottom="@dimen/margin_2xlarge"
+                            android:layout_marginTop="@dimen/margin_2xSmall"
                             android:id="@+id/ll_distance"
-                            android:layout_marginEnd="@dimen/margin_2xlarge"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/ll_country">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/text_distance"
-                                style="@style/MediumL"
-                                android:textColor="@color/neutral500"/>
+                            app:layout_constraintTop_toBottomOf="@id/tvLocation">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                app:srcCompat="@drawable/ic_distance"/>
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/tvDistance"
                                 tools:text="52355.25 meters"
-                                android:layout_marginStart="@dimen/margin_4xSmall"
-                                style="@style/MediumL"
-                                android:textColor="@color/neutral700"/>
+                                android:layout_marginStart="@dimen/margin_2xSmall"
+                                style="@style/MediumN"
+                                android:textColor="@color/neutral500"/>
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/margin_small"
-                            android:layout_marginStart="@dimen/margin_2xlarge"
-                            android:layout_marginBottom="@dimen/margin_2xlarge"
+                            android:layout_marginTop="@dimen/margin_2xSmall"
                             android:id="@+id/ll_local_time"
-                            android:layout_marginEnd="@dimen/margin_2xlarge"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/ll_distance">
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/text_local_time"
-                                style="@style/MediumL"
-                                android:textColor="@color/neutral500"/>
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                app:srcCompat="@drawable/ic_time"/>
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/tvLocalTime"
                                 tools:text="2024-07-4 14:32 AM"
-                                android:layout_marginStart="@dimen/margin_4xSmall"
-                                style="@style/MediumL"
-                                android:textColor="@color/neutral700"/>
+                                android:layout_marginStart="@dimen/margin_2xSmall"
+                                style="@style/MediumN"
+                                android:textColor="@color/neutral500"/>
                         </LinearLayout>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -283,7 +243,8 @@
                     android:layout_marginEnd="@dimen/margin_small">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_small">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -293,21 +254,18 @@
                             app:srcCompat="@drawable/ic_sun_rise"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:layout_marginTop="@dimen/margin_small"/>
+                            app:layout_constraintTop_toTopOf="parent"/>
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:id="@+id/tv_sun_rise"
-                            style="@style/MediumL"
+                            style="@style/MediumN"
                             tools:text="6:15 AM"
-                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginTop="@dimen/margin_4xSmall"
                             android:textColor="@color/neutral500"
-                            android:layout_marginHorizontal="@dimen/margin_2xlarge"
                             app:layout_constraintTop_toBottomOf="@id/iv_sun_rise"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_marginBottom="@dimen/margin_2xlarge"/>
+                            app:layout_constraintBottom_toBottomOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -324,7 +282,8 @@
                     android:layout_marginStart="@dimen/margin_small">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_small">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -334,21 +293,18 @@
                             app:srcCompat="@drawable/ic_sun_set"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:layout_marginTop="@dimen/margin_small"/>
+                            app:layout_constraintTop_toTopOf="parent"/>
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:id="@+id/tv_sun_set"
-                            style="@style/MediumL"
+                            style="@style/MediumN"
                             tools:text="6:00 PM"
-                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginTop="@dimen/margin_4xSmall"
                             android:textColor="@color/neutral500"
-                            android:layout_marginHorizontal="@dimen/margin_2xlarge"
                             app:layout_constraintTop_toBottomOf="@id/iv_sun_set"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_marginBottom="@dimen/margin_2xlarge"/>
+                            app:layout_constraintBottom_toBottomOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -365,7 +321,8 @@
                     android:layout_marginEnd="@dimen/margin_small">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_small">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
@@ -375,21 +332,18 @@
                             app:srcCompat="@drawable/ic_moon_rise"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:layout_marginTop="@dimen/margin_small"/>
+                            app:layout_constraintTop_toTopOf="parent"/>
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:id="@+id/tv_moon_rise"
-                            style="@style/MediumL"
+                            style="@style/MediumN"
                             tools:text="6:15 AM"
-                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginTop="@dimen/margin_4xSmall"
                             android:textColor="@color/neutral500"
-                            android:layout_marginHorizontal="@dimen/margin_2xlarge"
                             app:layout_constraintTop_toBottomOf="@id/iv_moon_rise"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_marginBottom="@dimen/margin_2xlarge"/>
+                            app:layout_constraintBottom_toBottomOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -406,32 +360,30 @@
                     android:layout_marginStart="@dimen/margin_small">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_small">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/iv_moon_set"
-                            android:layout_width="29dp"
-                            android:layout_height="32dp"
-                            android:layout_marginTop="@dimen/margin_small"
-                            app:layout_constraintDimensionRatio="h 1,1"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
                             app:layout_constraintWidth_percent="0.2"
-                            app:srcCompat="@drawable/ic_moon_set" />
+                            app:layout_constraintDimensionRatio="h 1,1"
+                            app:srcCompat="@drawable/ic_moon_set"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:id="@+id/tv_moon_set"
-                            style="@style/MediumL"
+                            style="@style/MediumN"
                             tools:text="6:00 PM"
-                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginTop="@dimen/margin_4xSmall"
                             android:textColor="@color/neutral500"
-                            android:layout_marginHorizontal="@dimen/margin_2xlarge"
                             app:layout_constraintTop_toBottomOf="@id/iv_moon_set"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_marginBottom="@dimen/margin_2xlarge"/>
+                            app:layout_constraintBottom_toBottomOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -465,7 +417,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/tv_title_sun"
-                            style="@style/MediumL"
+                            style="@style/LightN"
                             android:layout_marginTop="@dimen/margin_small"
                             android:text="@string/text_time_different_from_sunrise_to_moonrise"
                             android:textColor="@color/neutral500"
@@ -485,7 +437,7 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            style="@style/MediumL"
+                            style="@style/LightN"
                             android:id="@+id/tv_title_moon"
                             android:layout_marginTop="@dimen/margin_small"
                             android:text="@string/text_time_different_from_sunset_to_moonset"

@@ -1,6 +1,7 @@
 package com.example.weatherapp.domain.model.astronomy
 
 data class AstronomyVO(
+    val name : String,
     val region : String,
     val country : String,
     val distance : String,

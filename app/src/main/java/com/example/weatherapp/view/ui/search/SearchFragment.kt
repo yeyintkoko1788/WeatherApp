@@ -10,6 +10,9 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.weatherapp.R
 import com.example.weatherapp.databinding.FragmentSearchBinding
 import com.example.weatherapp.domain.model.FlowReturnResult
 import com.example.weatherapp.view.BaseFragment
@@ -17,6 +20,7 @@ import com.example.weatherapp.view.adapter.CityAdapter
 import com.example.weatherapp.view.delegate.CityDelegate
 import com.example.weatherapp.view.ui.astronomy.WeatherViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import jp.wasabeef.glide.transformations.BlurTransformation
 
 @AndroidEntryPoint
 class SearchFragment : BaseFragment<WeatherViewModel>(), CityDelegate {
@@ -49,11 +53,11 @@ class SearchFragment : BaseFragment<WeatherViewModel>(), CityDelegate {
                     binding.tipsRoot.visibility = View.GONE
                     binding.itemsRoot.visibility = View.VISIBLE
                     if (it.data.isEmpty()){
-                        binding.animView.visibility = View.VISIBLE
+                        binding.rlEmpty.visibility = View.VISIBLE
                         binding.rvCities.visibility = View.GONE
                         adapter?.clearData()
                     }else{
-                        binding.animView.visibility = View.GONE
+                        binding.rlEmpty.visibility = View.GONE
                         binding.rvCities.visibility = View.VISIBLE
                         adapter?.setNewDataList(it.data)
                     }
@@ -72,28 +76,18 @@ class SearchFragment : BaseFragment<WeatherViewModel>(), CityDelegate {
     }
 
     private fun initUI() {
-        binding.searchView.requestFocus()
-        binding.searchView.setOnSearchClickListener{
-            binding.tvSearchTitle.visibility = View.GONE
-        }
+//        Glide.with(this).load(R.drawable.ic_background)
+//            .apply(RequestOptions.bitmapTransform(BlurTransformation(10, 2)))
+//            .into(binding.ivBackground)
 
-        binding.searchView.setOnCloseListener {
-            binding.tvSearchTitle.visibility = View.VISIBLE
-            false
-        }
-
-        binding.searchView.setOnQueryTextListener(object : OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                if (query != null)
-                    viewModel.getSearchResult(query)
-                return false
+        binding.btnSearch.setOnClickListener {
+            val city = binding.edtCity.text.toString()
+            if (city.isNotEmpty()) {
+                viewModel.getSearchResult(city)
+            }else{
+                binding.edtCity.error = "Please enter city name"
             }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                return false
-            }
-
-        })
+        }
 
         adapter = CityAdapter(requireContext(), this)
         binding.rvCities.adapter = adapter
