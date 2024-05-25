@@ -129,7 +129,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="visible"
+                android:visibility="gone"
                 android:id="@+id/data_root"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -240,7 +240,7 @@
                     app:cardBackgroundColor="@color/white"
                     android:layout_marginTop="@dimen/margin_small"
                     android:layout_marginStart="@dimen/margin_2xlarge"
-                    android:layout_marginEnd="@dimen/margin_small">
+                    android:layout_marginEnd="@dimen/margin_2xSmall">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -263,7 +263,7 @@
                             style="@style/MediumN"
                             tools:text="6:15 AM"
                             android:layout_marginTop="@dimen/margin_4xSmall"
-                            android:textColor="@color/neutral500"
+                            android:textColor="@color/neutral700"
                             app:layout_constraintTop_toBottomOf="@id/iv_sun_rise"
                             app:layout_constraintBottom_toBottomOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -279,7 +279,7 @@
                     android:id="@+id/sunset_card"
                     android:layout_marginTop="@dimen/margin_small"
                     android:layout_marginEnd="@dimen/margin_2xlarge"
-                    android:layout_marginStart="@dimen/margin_small">
+                    android:layout_marginStart="@dimen/margin_2xSmall">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -302,7 +302,7 @@
                             style="@style/MediumN"
                             tools:text="6:00 PM"
                             android:layout_marginTop="@dimen/margin_4xSmall"
-                            android:textColor="@color/neutral500"
+                            android:textColor="@color/neutral700"
                             app:layout_constraintTop_toBottomOf="@id/iv_sun_set"
                             app:layout_constraintBottom_toBottomOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -318,7 +318,7 @@
                     app:cardBackgroundColor="@color/white"
                     android:layout_marginTop="@dimen/margin_small"
                     android:layout_marginStart="@dimen/margin_2xlarge"
-                    android:layout_marginEnd="@dimen/margin_small">
+                    android:layout_marginEnd="@dimen/margin_2xSmall">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -341,7 +341,7 @@
                             style="@style/MediumN"
                             tools:text="6:15 AM"
                             android:layout_marginTop="@dimen/margin_4xSmall"
-                            android:textColor="@color/neutral500"
+                            android:textColor="@color/neutral700"
                             app:layout_constraintTop_toBottomOf="@id/iv_moon_rise"
                             app:layout_constraintBottom_toBottomOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -357,7 +357,7 @@
                     android:id="@+id/moonset_card"
                     android:layout_marginTop="@dimen/margin_small"
                     android:layout_marginEnd="@dimen/margin_2xlarge"
-                    android:layout_marginStart="@dimen/margin_small">
+                    android:layout_marginStart="@dimen/margin_2xSmall">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -381,7 +381,7 @@
                             style="@style/MediumN"
                             tools:text="6:00 PM"
                             android:layout_marginTop="@dimen/margin_4xSmall"
-                            android:textColor="@color/neutral500"
+                            android:textColor="@color/neutral700"
                             app:layout_constraintTop_toBottomOf="@id/iv_moon_set"
                             app:layout_constraintBottom_toBottomOf="parent"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -402,7 +402,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/margin_2xlarge">
+                        android:padding="@dimen/margin_small">
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -418,7 +418,7 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/tv_title_sun"
                             style="@style/LightN"
-                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginTop="@dimen/margin_2xSmall"
                             android:text="@string/text_time_different_from_sunrise_to_moonrise"
                             android:textColor="@color/neutral500"
                             app:layout_constraintStart_toStartOf="parent"
@@ -439,7 +439,7 @@
                             android:layout_height="wrap_content"
                             style="@style/LightN"
                             android:id="@+id/tv_title_moon"
-                            android:layout_marginTop="@dimen/margin_small"
+                            android:layout_marginTop="@dimen/margin_2xSmall"
                             android:text="@string/text_time_different_from_sunset_to_moonset"
                             android:textColor="@color/neutral500"
                             app:layout_constraintStart_toStartOf="parent"

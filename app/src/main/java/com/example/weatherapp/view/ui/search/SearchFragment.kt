@@ -15,6 +15,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.weatherapp.R
 import com.example.weatherapp.databinding.FragmentSearchBinding
 import com.example.weatherapp.domain.model.FlowReturnResult
+import com.example.weatherapp.hideKeyboard
 import com.example.weatherapp.view.BaseFragment
 import com.example.weatherapp.view.adapter.CityAdapter
 import com.example.weatherapp.view.delegate.CityDelegate
@@ -81,6 +82,7 @@ class SearchFragment : BaseFragment<WeatherViewModel>(), CityDelegate {
 //            .into(binding.ivBackground)
 
         binding.btnSearch.setOnClickListener {
+            hideKeyboard()
             val city = binding.edtCity.text.toString()
             if (city.isNotEmpty()) {
                 viewModel.getSearchResult(city)

@@ -16,6 +16,7 @@ import com.example.weatherapp.databinding.FragmentSportBinding
 import com.example.weatherapp.domain.model.FlowReturnResult
 import com.example.weatherapp.domain.model.sport.SportItemVO
 import com.example.weatherapp.domain.model.sport.SportVO
+import com.example.weatherapp.hideKeyboard
 import com.example.weatherapp.view.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import fr.haan.resultat.Resultat
@@ -44,6 +45,7 @@ class SportFragment : BaseFragment<SportViewModel>() {
 
     private fun initUI(){
         binding.btnSearch.setOnClickListener{
+            hideKeyboard()
             val city = binding.edtCity.text.toString()
             if (city.isNotEmpty()) {
                 viewModel.getSport(city)
@@ -131,18 +133,19 @@ class SportFragment : BaseFragment<SportViewModel>() {
     fun addDataRow(data : SportItemVO, view : TableLayout) {
         val tableRow = TableRow(requireContext())
         tableRow.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primaryTransparent))
+        tableRow.weightSum = 6f
         tableRow.setPadding(10, 10, 10, 10)
 
         val layoutParams = TableRow.LayoutParams(
-            TableRow.LayoutParams.WRAP_CONTENT,
+            0,
             TableRow.LayoutParams.WRAP_CONTENT
         )
         layoutParams.weight = 1f
         val layoutParams2 = TableRow.LayoutParams(
-            TableRow.LayoutParams.WRAP_CONTENT,
+            0,
             TableRow.LayoutParams.WRAP_CONTENT
         )
-        layoutParams2.weight = 3f
+        layoutParams2.weight = 2f
 
         val matchTextView = TextView(requireContext())
         matchTextView.text = data.match

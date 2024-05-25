@@ -128,37 +128,38 @@
                     android:background="@color/colorPrimary"
                     android:padding="10dp"
                     android:layout_marginTop="@dimen/margin_2xSmall"
-                    android:textAlignment="center">
+                    android:textAlignment="center"
+                    android:weightSum="6">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="3"
+                        android:layout_weight="2"
                         android:textColor="@color/white"
                         style="@style/MediumXS"
                         android:text="Match"/>
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         style="@style/MediumXS"
                         android:textColor="@color/white"
                         android:text="Stadium" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         style="@style/MediumXS"
                         android:textColor="@color/white"
                         android:text="Country" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         style="@style/MediumXS"
                         android:layout_weight="1"
                         android:text="Tour Name" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         style="@style/MediumXS"
@@ -210,38 +211,39 @@
                 <TableRow
                     android:background="@color/colorPrimary"
                     android:padding="10dp"
+                    android:weightSum="6"
                     android:layout_marginTop="@dimen/margin_2xSmall"
                     android:textAlignment="center">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="3"
+                        android:layout_weight="2"
                         android:textColor="@color/white"
                         style="@style/MediumXS"
                         android:text="Match"/>
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         style="@style/MediumXS"
                         android:textColor="@color/white"
                         android:text="Stadium" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         style="@style/MediumXS"
                         android:textColor="@color/white"
                         android:text="Country" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         style="@style/MediumXS"
                         android:layout_weight="1"
                         android:text="Tour Name" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         style="@style/MediumXS"
@@ -298,38 +300,39 @@
                 <TableRow
                     android:background="@color/colorPrimary"
                     android:padding="10dp"
+                    android:weightSum="6"
                     android:layout_marginTop="@dimen/margin_2xSmall"
                     android:textAlignment="center">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="3"
+                        android:layout_weight="2"
                         android:textColor="@color/white"
                         style="@style/MediumXS"
                         android:text="Match"/>
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         style="@style/MediumXS"
                         android:textColor="@color/white"
                         android:text="Stadium" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         style="@style/MediumXS"
                         android:textColor="@color/white"
                         android:text="Country" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         style="@style/MediumXS"
                         android:layout_weight="1"
                         android:text="Tour Name" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         style="@style/MediumXS"

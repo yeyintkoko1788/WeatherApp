@@ -33,123 +33,131 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="@dimen/margin_4xlarge"
+        android:clipToPadding="false"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rl_city"
-            android:minHeight="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginHorizontal="@dimen/margin_2xlarge"
-            android:layout_marginTop="@dimen/margin_2xlarge"
-            android:paddingHorizontal="@dimen/margin_2xlarge"
-            android:background="@drawable/bg_not_focus_search">
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:id="@+id/iv_search"
-                app:srcCompat="@drawable/ic_search"
-                android:layout_centerVertical="true"/>
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/edt_city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/iv_search"
-                android:hint="@string/text_city_search"
-                android:inputType="textPersonName"
-                android:imeOptions="actionDone"
-                style="@style/MediumL"
-                android:textColor="@color/neutral500"
-                android:layout_marginStart="@dimen/margin_4xSmall"
-                android:layout_centerVertical="true"
-                android:background="@null"/>
-        </RelativeLayout>
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:layout_marginHorizontal="@dimen/margin_2xlarge"
-            style="@style/PrimaryButtonStyle"
-            android:text="@string/text_search"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rl_city"
-            android:layout_marginTop="@dimen/margin_2xlarge"/>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/tips_root"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btn_search"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="@dimen/margin_2xlarge">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_tips"
-            style="@style/DemiBold3XL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_tips"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            style="@style/MediumN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
-            android:text="Search by entering US Zipcode, UK Postcode, Canada Postalcode, IP address, Latitude/Longitude (decimal degree) or city name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_tips" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/items_root"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/btn_search"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:visibility="gone">
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingVertical="@dimen/margin_2xSmall"
-                android:clipToPadding="false"
-                android:id="@+id/rv_cities"/>
+            android:layout_height="match_parent">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rl_empty"
-                android:visibility="gone"
-                android:layout_marginHorizontal="@dimen/margin_2xlarge"
+                android:id="@+id/rl_city"
+                android:minHeight="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/empty_football"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:lottie_loop="true"
-                    android:layout_centerHorizontal="true"
-                    app:lottie_fileName="empty_search.json"
-                    app:lottie_autoPlay="true"/>
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/margin_2xlarge"
+                android:layout_marginTop="@dimen/margin_2xlarge"
+                android:paddingHorizontal="@dimen/margin_2xlarge"
+                android:background="@drawable/bg_not_focus_search">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/iv_search"
+                    app:srcCompat="@drawable/ic_search"
+                    android:layout_centerVertical="true"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_city"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/neutral700"
+                    android:layout_toEndOf="@id/iv_search"
+                    android:hint="@string/text_city_search"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionDone"
                     style="@style/MediumL"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/empty_football"
-                    android:text="@string/text_there_is_no_relevant_data"/>
+                    android:textColor="@color/neutral500"
+                    android:layout_marginStart="@dimen/margin_4xSmall"
+                    android:layout_centerVertical="true"
+                    android:background="@null"/>
             </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_marginHorizontal="@dimen/margin_2xlarge"
+                style="@style/PrimaryButtonStyle"
+                android:text="@string/text_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_city"
+                android:layout_marginTop="@dimen/margin_2xlarge"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tips_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btn_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="@dimen/margin_2xlarge">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_tips"
+                    style="@style/DemiBold3XL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_tips"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/MediumN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="Search by entering US Zipcode, UK Postcode, Canada Postalcode, IP address, Latitude/Longitude (decimal degree) or city name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_tips" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/items_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btn_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="@dimen/margin_2xSmall"
+                    android:nestedScrollingEnabled="false"
+                    android:clipToPadding="false"
+                    android:id="@+id/rv_cities"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_empty"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="@dimen/margin_2xlarge"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/empty_football"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:lottie_loop="true"
+                        android:layout_centerHorizontal="true"
+                        app:lottie_fileName="empty_search.json"
+                        app:lottie_autoPlay="true"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/neutral700"
+                        style="@style/MediumL"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/empty_football"
+                        android:text="@string/text_there_is_no_relevant_data"/>
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

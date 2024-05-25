@@ -13,6 +13,7 @@ import com.example.weatherapp.R
 import com.example.weatherapp.databinding.FragmentHomeBinding
 import com.example.weatherapp.domain.model.FlowReturnResult
 import com.example.weatherapp.domain.model.astronomy.AstronomyVO
+import com.example.weatherapp.hideKeyboard
 import com.example.weatherapp.view.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.text.SimpleDateFormat
@@ -98,6 +99,7 @@ class AstronomyFragment : BaseFragment<WeatherViewModel>() {
         }
 
         binding.btnSearch.setOnClickListener{
+            hideKeyboard()
             val city = binding.edtCity.text.toString()
             if (city.isNotEmpty()) {
                 viewModel.getAstronomy(city, currentSelectedDate)

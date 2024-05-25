@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.weatherapp.R
 import com.example.weatherapp.databinding.ActivityLoginBinding
+import com.example.weatherapp.hideKeyboard
 import com.example.weatherapp.navigate
 import com.example.weatherapp.network.showLogD
 import com.example.weatherapp.network.showLogW
@@ -79,9 +80,11 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
 
     override fun initUI() {
         binding.btnLogin.setOnClickListener {
+            hideKeyboard()
            manualLogin()
         }
         binding.btnLoginGoogle.setOnClickListener {
+            hideKeyboard()
             //firebaseAuthWithGoogle()
             signIn()
         }
